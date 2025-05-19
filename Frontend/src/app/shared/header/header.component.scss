@@ -3,7 +3,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    color: white;
+    color: var(--white);
     padding: 20px;
     text-align: center;
     display: flex;
@@ -39,7 +39,7 @@ header img {
   }
 
   .btn {
-    background-color: #ffd166;
+    background-color: var(--primary);
     color: var(--black);
     text-decoration: none;
     padding: 1rem 2rem;
@@ -50,6 +50,42 @@ header img {
   }
   
   .btn:hover {
-    background-color: #f4a261;
+    background-color: var(--secondary);
     transform: translateY(-3px);
   }
+
+
+  .carrito-btn {
+  position: fixed;
+  right: 15rem;
+  background-color: #4f46e5; /* azul indigo */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  z-index: 999;
+}
+
+.carrito-btn:hover {
+  transform: scale(1.1);
+}
+
+.carrito-count {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}

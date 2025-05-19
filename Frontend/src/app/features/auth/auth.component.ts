@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../shared/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../core/service/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
-  imports: [HeaderComponent, FormsModule],
+  imports: [FormsModule],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.scss'
 })

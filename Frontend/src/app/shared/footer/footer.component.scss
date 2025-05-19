@@ -1,0 +1,30 @@
+.footer {
+  background-color: #3b3b3b;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 20px 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info,
+.footer-horari {
+  max-width: 48%;
+  line-height: 1.6;
+}
+
+.footer-info a {
+  color: #ffd166;
+  text-decoration: none;
+}
+
+strong {
+  color: #d9f3ff;
+}

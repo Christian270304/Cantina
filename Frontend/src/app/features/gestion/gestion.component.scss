@@ -1,10 +1,17 @@
  main.gestio-productes {
         max-width: 800px;
+        max-height: 100vh;
         margin: 2rem auto;
         padding: 2rem;
         background-color: #fff8f0;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .llista-productes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     .gestio-productes h2 {
@@ -31,3 +38,19 @@
         border: 1px solid #ccc;
         font-size: 1rem;
     }
+
+     .btn {
+    background-color: var(--primary);
+    color: var(--black);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .btn:hover {
+    background-color: var(--secondary);
+    transform: translateY(-3px);
+  }

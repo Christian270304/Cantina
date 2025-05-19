@@ -1,1 +1,9 @@
-<router-outlet></router-outlet>
+<div class="container">
+    @if (showHeader) {
+        <app-header></app-header>
+    }
+    <div class="central">
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+</div>

@@ -125,3 +125,21 @@ export const producto = async (productId, cartId) => {
         throw new Error('Error finding product in cart: ' + error.message);
     }
 }
+
+export const getProductes = async (cartId) => {
+    try {
+        const cartItems = await CartItem.findAll({
+            where: { cart_id: cartId },
+            include: [
+                {
+                    model: Producte,
+                    as: 'producte',
+                    attributes: ['id', 'nom', 'preu', 'disponible', 'categoria', 'unitats'],
+                },
+            ],
+        });
+        return cartItems;
+    } catch (error) {
+        throw new Error('Error retrieving productes from cart: ' + error.message);
+    }
+}

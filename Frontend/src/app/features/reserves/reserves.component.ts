@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../shared/header/header.component';
 
 @Component({
   selector: 'app-reserves',
-  imports: [HeaderComponent],
+  imports: [],
   templateUrl: './reserves.component.html',
   styleUrl: './reserves.component.scss'
 })
