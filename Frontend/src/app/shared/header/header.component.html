@@ -1,0 +1,14 @@
+<header>
+    <div class="content">
+        <img src="assets/images/logo-institut-sapalomera.png" alt="Logo INS Sa Palomera" class="logo">
+        <h1>Productes disponibles</h1>
+    </div>
+    <nav class="menu-principal">
+        <a [routerLink]="['/productes']" class="btn">📋 Veure Productes</a>
+        <a [routerLink]="['/historial']" class="btn">📜 Historial</a>
+        <a [routerLink]="['/perfil']" class="btn">👤 Perfil</a>
+        <a [routerLink]="['/reserves']" class="btn">📦 Reserves</a>
+        <a [routerLink]="['/gestion']" class="btn">⚙️ Gestió Productes</a>
+        <a (click)="logout()" class="btn">🔒 Tancar Sessió</a>
+    </nav>
+</header>
