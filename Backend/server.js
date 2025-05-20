@@ -11,10 +11,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   origin: 'https://sa-cantina.vercel.app',  
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],  
   credentials: true,  
 }));
+app.options('*', cors());
 
 app.use('/api', apiRoutes);
 
