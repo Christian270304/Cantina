@@ -4,12 +4,6 @@ import { authMiddleware } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.status(200).json({
-    message: 'Welcome to the API',
-  });
-});
-
 router.get('/productes', authMiddleware, ApiController.getProductes);
 router.get('/check', authMiddleware, ApiController.check);
 router.get('/getCart', authMiddleware, ApiController.getCart);
