@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: 'https://sa-cantina.vercel.app/',  
+  origin: 'https://sa-cantina.vercel.app',  
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],  
   credentials: true,  
