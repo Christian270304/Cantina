@@ -1,7 +1,7 @@
 import { Producte } from "./ProductesModel.js";
 import { CartItem } from "./CartItemsModel.js";
 import { Cart } from "./CartsModel.js";
-import { User } from "./userModel.js";
+import { User } from "./UserModel.js";
 
 // Un usuario tiene un carrito (1:1)
 User.hasOne(Cart, { foreignKey: "user_id", as: "cart" });
