@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { DB, sequelize } from './config/db.js';
-import apiRoute from './routes/api.route.js';
+import apiRoutes from './routes/api.route.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,7 +17,8 @@ app.use(cors({
 }));
 app.options('*', cors());
 
-app.use('/api', apiRoute);
+
+app.use('/api', apiRoutes);
 
 (async () => {
   await DB();
