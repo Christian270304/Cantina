@@ -11,6 +11,7 @@ import { CarritoService } from '../../core/service/carrito.service';
 })
 export class HeaderComponent {
 carritoLength = 0;
+menuAbierto = false;
 @Output() openCarrito: EventEmitter<boolean> = new EventEmitter<boolean>();
 
 constructor(private authService: AuthService, private carritoService: CarritoService) {

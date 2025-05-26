@@ -3,20 +3,22 @@
         <img src="assets/images/logo-institut-sapalomera.png" alt="Logo INS Sa Palomera" class="logo">
         <h1>Productes disponibles</h1>
     </div>
-    <nav class="menu-principal">
+    <nav class="menu-principal" [class.abierto]="menuAbierto">
         <a [routerLink]="['/productes']" class="btn">📋 Veure Productes</a>
         <a [routerLink]="['/historial']" class="btn">📜 Historial</a>
         <a [routerLink]="['/perfil']" class="btn">👤 Perfil</a>
         <a [routerLink]="['/reserves']" class="btn">📦 Reserves</a>
         <a [routerLink]="['/gestion']" class="btn">⚙️ Gestió Productes</a>
-        <a (click)="logout()" class="btn">🔒 Tancar Sessió</a>
-        <!-- Boton en forma circular de un carrito -->
-        @if (carritoLength > 0) {
-            <a (click)="openCarritoModal()" class="carrito-btn">
-            <!-- <img src="assets/images/carrito.png" alt="Carrito de compras"> -->
-             🛒
-            <span class="carrito-count">{{ carritoLength }}</span>
-        </a>
-        }
+        <a (click)="logout()" class="btn">🔒 Tancar Sessió</a>   
     </nav>
+    @if (carritoLength > 0) {
+        <a (click)="openCarritoModal()" class="carrito-btn">
+            🛒
+        <span class="carrito-count">{{ carritoLength }}</span>
+    </a>
+    }
+    <button class="hamburger-btn" (click)="menuAbierto = !menuAbierto">
+    &#9776;
+    </button>
+
 </header>
