@@ -1,6 +1,6 @@
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../config/db.js';
-import { User } from './userModel.js';
+import { User } from './UserModel.js';
 
 export const Cart = sequelize.define('carts', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },

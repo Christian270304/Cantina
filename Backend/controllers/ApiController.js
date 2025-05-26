@@ -8,7 +8,17 @@ export class ApiController {
             if (!user) {
                 return res.status(401).json({ error: "Invalid email or password" });
             }
-            res.status(200).json({ succes: true, message: "Login successful", data: [ user ] });
+
+            const token = generateAuthToken(user.id);
+
+            res.cookie('auth_token', token, {
+                httpOnly: true,
+                secure: true,
+                sameSite: 'none',
+                maxAge: 3600000,
+            });
+            
+            res.status(200).json({ succes: true, message: "Register successful", data: [ user ] });
         } catch (error) {
             res.status(500).json({ error: "Error during login" });
         }
